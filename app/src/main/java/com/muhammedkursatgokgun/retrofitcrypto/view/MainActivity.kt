@@ -1,12 +1,13 @@
-package com.muhammedkursatgokgun.retrofitcrypto
+package com.muhammedkursatgokgun.retrofitcrypto.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.muhammedkursatgokgun.retrofitcrypto.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var a = 5
+        //https://github.com/atilsamancioglu/K21-JSONDataSet/blob/master/crypto.json
     }
 }
