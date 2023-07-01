@@ -1,8 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RetrofitCrypto" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.RetrofitCrypto" parent="Theme.AppCompat.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#4CAF50</item>
     </style>
 
     <style name="Theme.RetrofitCrypto" parent="Base.Theme.RetrofitCrypto" />

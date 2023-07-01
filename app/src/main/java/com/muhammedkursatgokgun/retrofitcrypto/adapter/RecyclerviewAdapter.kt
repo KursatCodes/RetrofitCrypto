@@ -1,0 +1,30 @@
+package com.muhammedkursatgokgun.retrofitcrypto.adapter
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.muhammedkursatgokgun.retrofitcrypto.R
+import com.muhammedkursatgokgun.retrofitcrypto.databinding.RowLayoutBinding
+import com.muhammedkursatgokgun.retrofitcrypto.model.CryptoModel
+
+class RecyclerviewAdapter(private val cryptoList : ArrayList<CryptoModel>) : RecyclerView.Adapter<RecyclerviewAdapter.RowHolder>() {
+    class RowHolder(var binding : RowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowHolder {
+        val view = RowLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return RowHolder(view)
+    }
+
+    override fun getItemCount(): Int {
+        return cryptoList.count()
+    }
+
+    override fun onBindViewHolder(holder: RowHolder, position: Int) {
+        holder.binding.textName.text = cryptoList.get(position).currency
+        holder.binding.textPrice.text = cryptoList.get(position).price
+    }
+}
