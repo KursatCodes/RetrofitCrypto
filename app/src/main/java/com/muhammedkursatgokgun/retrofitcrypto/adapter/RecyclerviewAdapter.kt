@@ -1,5 +1,6 @@
 package com.muhammedkursatgokgun.retrofitcrypto.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,8 +23,10 @@ class RecyclerviewAdapter(private val cryptoList : ArrayList<CryptoModel>) : Rec
     override fun getItemCount(): Int {
         return cryptoList.count()
     }
-
+    private val colorlar: Array<String> = arrayOf("#33FF36","#FF4233","#333CFF","#FF33E9","#FFF033"
+        ,"#33FFF9","#FFC433","#C733FF")
     override fun onBindViewHolder(holder: RowHolder, position: Int) {
+        holder.binding.lineerLayout.setBackgroundColor(Color.parseColor(colorlar[position % 8]))
         holder.binding.textName.text = cryptoList.get(position).currency
         holder.binding.textPrice.text = cryptoList.get(position).price
     }
